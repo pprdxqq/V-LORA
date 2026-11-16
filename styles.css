@@ -29,3 +29,20 @@ html[data-theme="dark"] .mobile-menu{background:rgba(23,26,33,.94);border-color:
 html[data-theme="dark"] .mobile-menu a{color:#f2f5f7;border-color:#ffffff20}
 html[data-theme="dark"] .mobile-menu .theme-toggle{background:#242a33;color:#f2f5f7;border-color:#ffffff30}
 @media(max-width:850px){html[data-theme="dark"] .mobile-menu{box-shadow:0 18px 45px #0009}}
+
+/* Four portfolio tiers: maintain readable cards across breakpoints. */
+@media(min-width:851px){
+  .price-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .price-card{padding:22px 18px}
+  .price-card .price{font-size:clamp(26px,2.7vw,37px)}
+  .price-card .tier{letter-spacing:.08em}
+}
+@media(min-width:851px) and (max-width:1120px){
+  .price-card{padding:19px 15px}
+  .price-card .price{font-size:27px}
+  .price-card .button{font-size:8px;padding-inline:12px}
+}
+@media(max-width:850px){.price-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.price-grid{grid-template-columns:1fr}}
+#hoursAnnual{display:block;margin-top:7px;color:#718000}
+html[data-theme="dark"] #hoursAnnual{color:var(--acid)}
